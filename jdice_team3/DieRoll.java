@@ -26,7 +26,7 @@ public class DieRoll {
 	private int bonus;
 	private static Random rnd = new Random();
 
-	public DieRoll(int ndice, int nsides, int bonus) {
+	public DieRoll(int ndice,int nsides,int bonus) {
 		this.ndice = ndice;
 		this.nsides = nsides;
 		this.bonus = bonus;
