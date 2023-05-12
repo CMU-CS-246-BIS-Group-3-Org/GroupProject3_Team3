@@ -328,6 +328,7 @@ public class CalculatorSystem extends javax.swing.JFrame {
             }
         });
     }
+    
 // khởi tạo các button và fields và gán tên cho những thành phần này
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
