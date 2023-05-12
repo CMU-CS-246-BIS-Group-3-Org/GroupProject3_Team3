@@ -31,9 +31,10 @@ public class DiceSum extends DieRoll {
 
 	public RollResult makeRoll() {
 		return r1.makeRoll().andThen(r2.makeRoll());
-   
+	}
 		public String toString() {
 			return r1.toString() + " & "+r2.toString();
 		}
-    }
+    
 }
+// updated
