@@ -38,7 +38,7 @@ public class DiceParser{
 	    }
 	    buff=buff.delete(0,index);
 	}
-	int a;
+	int a,b,c;
 	
 	public boolean isEmpty(){
 	    munchWhiteSpace();
