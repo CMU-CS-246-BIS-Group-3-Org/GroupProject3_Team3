@@ -20,20 +20,21 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
 public class DiceSum extends DieRoll {
-	private DieRoll r1;
+	private DieRoll r1; // thêm dấu ; sau r1
 	private DieRoll r2;
 
-	public DiceSum(DieRoll r1, DieRoll r2) {
+	public DiceSum(DieRoll r1, // thêm dấu , ngăn cách 2 biến ở sau r1
+			DieRoll r2) {
 		super(0, 0, 0);
 		this.r1 = r1;
 		this.r2 = r2;
 	}
 
-	public RollResult makeRoll() {
-		return r1.makeRoll().andThen(r2.makeRoll());
+	public RollResult makeRoll() { // xóa dấu chú thích "//"
+		return r1.makeRoll().andThen(r2.makeRoll()); // thêm dấu . tại r1.makeRoll() và r2.makeRoll() để có thể truy cập các chức năng của biến r1, r2
 	}
 		public String toString() {
-			return r1.toString() + " & "+r2.toString();
+			return r1.toString() + " & "+r2.toString(); // thêm dấu . tại r1.toString() để truy cập đến chức năng của biến r1
 		}
     
 }
