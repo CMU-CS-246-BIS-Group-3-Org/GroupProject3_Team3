@@ -20,14 +20,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
  */
 
-public class DieRoll {
+public class DieRoll { // thieu ten class
 	private int ndice;
 	private int nsides;
 	private int bonus;
-	private static Random rnd = new Random();
-
-	public DieRoll(int ndice,int nsides,int bonus) {
-		this.ndice = ndice;
+	private static Random rnd = new Random(); //sai cach tao ham random
+	
+	public DieRoll(int ndice, int nsides, int bonus) {
+		this.ndice = ndice; //thieu dau '.'sau this
 		this.nsides = nsides;
 		this.bonus = bonus;
 	}
@@ -46,9 +46,8 @@ public class DieRoll {
 		if (bonus > 0) {
 			ans = ans + "+" + bonus;
 		} else if (bonus < 0) {
-			ans += bonus;
+			ans += bonus; // sai cú pháp thực hiện phép cộng;
 		}
 		return ans;
 	}
-
 }
