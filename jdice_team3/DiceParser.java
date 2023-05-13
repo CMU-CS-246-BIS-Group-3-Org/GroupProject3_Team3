@@ -27,6 +27,7 @@ public class DiceParser{
 	public StringStream(String s){
 	    buff=new StringBuffer();
 	}
+	// bỏ dâu comment 
 	private void munchWhiteSpace() {
 	    int index=0;
 	    char curr;
@@ -45,8 +46,11 @@ public class DiceParser{
 	    return buff.toString().equals("");
 	}
 	public Integer getInt(){
-	    readInt();
+		//thêm return
+		return readInt();
 	}
+	    
+	
 	public Integer readInt(){
 	    int index=0;
 	    char curr;
@@ -59,6 +63,7 @@ public class DiceParser{
 	    }
 	    try{
 		Integer ans;
+		// thêm dấu . cho đúng cú pháp
 		ans=Integer.parseInt(buff.substring(0,index));
 		buff=buff.delete(0,index);
 		return ans;
@@ -105,7 +110,8 @@ public class DiceParser{
 	}
 
     }
-    /** roll::= ndice ; roll
+    // bỏ dấu comment
+     roll::= ndice ; roll
               | ndice
         xdice::= dice
                 | N X dice
@@ -116,7 +122,7 @@ public class DiceParser{
          die::= (N)? dN
          bonus::= + N
                 | -N
-    **/
+   
 
     public static Vector<DieRoll> parseRoll(String s){
 	StringStream ss=new StringStream(s.toLowerCase());
@@ -171,12 +177,12 @@ public class DiceParser{
 	return parseDTail(parseDiceInner(ss),ss);
     }
     private static DieRoll parseDiceInner(StringStream ss){
-	/*if(checkAndEat("FA(")) {
+	if(checkAndEat("FA(")) {
 	    DieRoll d=parseFA(ss);
 	    if(d==null)
 		return null;
 	    return parseDTail(d,ss);
-	    }*/
+	    }
 	Integer num=ss.getInt();
 	int dsides;
 	int ndice;
