@@ -167,10 +167,10 @@ public class DiceParser{
 	}
 	return ans;
     }
-    /**
+    // bỏ comment
      * dice::= die (bonus?) dtail
      *       XXXX| FA(die,bonus,N) dtail
-     */
+     
     private static DieRoll parseDice(StringStream ss){
 	return parseDTail(parseDiceInner(ss),ss);
     }
@@ -249,5 +249,6 @@ public class DiceParser{
 	test("hi");
 	test("4d4d4");
     }
+}
 
 
