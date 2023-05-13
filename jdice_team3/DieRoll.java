@@ -50,5 +50,4 @@ public class DieRoll { // thieu ten class
 		}
 		return ans;
 	}
-	
 }
