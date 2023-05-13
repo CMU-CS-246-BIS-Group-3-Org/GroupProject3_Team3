@@ -132,6 +132,7 @@ public class DiceParser {
          bonus::= + N
                 | -N
 
+                
 	public static Vector<DieRoll> parseRoll(String s) {
 		StringStream ss = new StringStream(s.toLowerCase());
 		Vector<DieRoll> v = parseRollInner(ss, new Vector<DieRoll>());
