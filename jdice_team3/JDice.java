@@ -19,6 +19,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
  */
+// Thieu cac import
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -45,7 +46,7 @@ public class JDice {
         public JDiceListener(JList resultList, JComboBox inputBox) {
             this.listItems = new Vector<String>();
             this.resultList = resultList;
-            this.inputBox = inputBox;
+            this.inputBox = inputBox;//thieu dau . cho thisinputbox
             lastEvent = 0;
         }
 
@@ -58,13 +59,13 @@ public class JDice {
                 String[] arr = s.split("=");
                 String name = "";
                 for (int i = 0; i < arr.length - 2; i++) {
-                    name = arr[i] + "=";
+                    name = arr[i] + "=";//thieu ;
                 }
                 if (arr.length >= 2)
                     name = name + arr[arr.length - 2];
                 doRoll(name, arr[arr.length - 1]);
             } else if (e.getActionCommand().equals(CLEAR)) {
-                doClear();
+                doClear();// thua dau _
             } else {
                 doRoll(null, e.getActionCommand());
             }
